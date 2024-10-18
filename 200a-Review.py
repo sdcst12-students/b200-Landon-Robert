@@ -5,7 +5,10 @@ def getIntegers(myList):
     # myList : expected list or tuple
     # iterate through myList and add all the integers to the new list
     integers = []
-
+    for i in myList:
+        x = round(i)
+        if x == i:
+            integers.append(i)
     return integers
 
 def getFactor(myList,number):
@@ -14,14 +17,21 @@ def getFactor(myList,number):
     # iterate through the list and add the number to the list if
     # it is a factor of the number
     factors = []
-
+    for i in myList:
+        if i > 0:
+            y = number/i
+            x = round(y,0)
+            if y == x:
+                factors.append(i)
     return factors
 
 def getNegatives(myList):
     # myList : expected list or tuple
     # iterate through myList and add all the negative numbers to the new list
     negatives = []
-
+    for i in myList:
+        if i < 0:
+            negatives.append(i)
     return negatives
 
 def getIntersection(list1,list2):
@@ -30,7 +40,10 @@ def getIntersection(list1,list2):
     # return a sorted list of numbers that is in both lists
     # the intersection of the 2 number sets
     common = []
-
+    for i in list1:
+        for j in list2:
+            if i == j:
+                common.append(j)
     return common
 
 def getUnion(list1,list2):
