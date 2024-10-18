@@ -40,10 +40,13 @@ def getIntersection(list1,list2):
     # return a sorted list of numbers that is in both lists
     # the intersection of the 2 number sets
     common = []
-    for i in list1:
+    list1.sort()
+    list2.sort()
+    for i in list1: 
         for j in list2:
             if i == j:
-                common.append(j)
+                common.append(i)
+    print(common)
     return common
 
 def getUnion(list1,list2):
@@ -52,7 +55,7 @@ def getUnion(list1,list2):
     # return a sorted list of numbers that is in either of the lists
     # duplicate values will be ignored
     union = []
-
+    
     return union   
 
 def getMerge(list1,list2):
